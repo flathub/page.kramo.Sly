@@ -45,8 +45,8 @@ modules:
       - type: archive
         strip-components: 0
         only-arches: [x86_64]
-        url: https://github.com/kra-mo/sly/releases/download/v0.1.3/Sly-0.1.3-linux-x86-64.tar.gz
-        sha256: 13879e135fe8728fab26617c93d76e84f341371476aa999f4cbdf50c59cadb32
+        url: https://github.com/kra-mo/sly/releases/download/v0.1.4/Sly-0.1.4-linux-x86-64.tar.gz
+        sha256: e340508d1ed61113d335f992e321dd674e7ef8e52c2ceb74f36e54364d2336f1
 
       - type: git
         dest: repo
