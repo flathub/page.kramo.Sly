@@ -52,4 +52,4 @@ modules:
         dest: repo
         url: https://github.com/kra-mo/sly.git
         tag: v0.1.4
-        commit: 5df98fd49900325133937400db1ee74f12444d10
+        commit: 70771eb0b90ff58b61d7c161d7567696dfe66411
