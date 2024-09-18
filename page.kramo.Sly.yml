@@ -45,11 +45,11 @@ modules:
       - type: archive
         strip-components: 0
         only-arches: [x86_64]
-        url: https://github.com/kra-mo/sly/releases/download/v0.3.3/Sly-0.3.3-Linux.tar.gz
-        sha256: f1d0c1b0d322010ba9c7e7e4a815fb09c51e8afb58105c983370f09ab2b006a5
+        url: https://github.com/kra-mo/sly/releases/download/v0.3.4/Sly-0.3.4-Linux.tar.gz
+        sha256: ba3f079cbac9305712c8eb07a94283f8e3c5e950576ef63529b18c5b8a77899e
 
       - type: git
         dest: repo
         url: https://github.com/kra-mo/sly.git
-        tag: v0.3.3
-        commit: 2489a82dea681fcdf6a3f590dfa54fcff8ddf27c
+        tag: v0.3.4
+        commit: eb46a78ae8dd513e6cc62b0a381115df648f3189
