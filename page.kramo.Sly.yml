@@ -10,20 +10,6 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
 modules:
-  - name: libhandy
-    buildsystem: meson
-    config-opts:
-      - -Dgtk_doc=false
-      - -Dtests=false
-      - -Dexamples=false
-      - -Dvapi=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/libhandy/1.8/libhandy-1.8.3.tar.xz
-        sha256: 05b497229073ff557f10b326e074c5066f8743a302d4820ab97bcb5cd2dab087
-        x-checker-data:
-          type: gnome
-          name: libhandy
   - name: sly
     # https://github.com/flathub/org.localsend.localsend_app/blob/6b35d6b87f536d4f547c53a6e3ed46bec7d87633/org.localsend.localsend_app.yml#L86
     buildsystem: simple
@@ -45,11 +31,11 @@ modules:
       - type: archive
         strip-components: 0
         only-arches: [x86_64]
-        url: https://github.com/kra-mo/sly/releases/download/v0.3.4/Sly-0.3.4-Linux.tar.gz
-        sha256: ba3f079cbac9305712c8eb07a94283f8e3c5e950576ef63529b18c5b8a77899e
+        url: https://github.com/kra-mo/sly/releases/download/v0.4.0/Sly-0.4.0-Linux.tar.gz
+        sha256: f07700134b2f8b24640d8c99fc91b6b27c94a1eabab1498b72231689a43f7fea
 
       - type: git
         dest: repo
         url: https://github.com/kra-mo/sly.git
-        tag: v0.3.4
-        commit: eb46a78ae8dd513e6cc62b0a381115df648f3189
+        tag: v0.4.0
+        commit: d08a80951c23aa090696cffcf68f6353f7b79fb2
