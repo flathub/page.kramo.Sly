@@ -31,11 +31,11 @@ modules:
       - type: archive
         strip-components: 0
         only-arches: [x86_64]
-        url: https://github.com/kra-mo/sly/releases/download/v0.4.0/Sly-0.4.0-Linux.tar.gz
-        sha256: f07700134b2f8b24640d8c99fc91b6b27c94a1eabab1498b72231689a43f7fea
+        url: https://github.com/kra-mo/sly/releases/download/v1.0.0/Sly-1.0.0-Linux.tar.gz
+        sha256: e751353ca8222782b8629a50114f2996c06255423c6b22fcf07a227d84c12037
 
       - type: git
         dest: repo
         url: https://github.com/kra-mo/sly.git
-        tag: v0.4.0
-        commit: d08a80951c23aa090696cffcf68f6353f7b79fb2
+        tag: v1.0.0
+        commit: c9d05657bff56e0605143d6fac308554f5152ea7
