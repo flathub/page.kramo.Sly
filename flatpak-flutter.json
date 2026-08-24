@@ -3,9 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm19"
-    ],
+    "sdk-extensions": ["org.freedesktop.Sdk.Extension.llvm19"],
     "command": "sly",
     "separate-locales": false,
     "finish-args": [
@@ -14,17 +12,13 @@
         "--socket=wayland",
         "--socket=fallback-x11"
     ],
-    "cleanup-commands": [
-        "rm -r /var/lib/*"
-    ],
+    "cleanup-commands": ["rm -r /var/lib/*"],
     "modules": [
         {
             "name": "Sly",
             "buildsystem": "simple",
             "build-options": {
-                "build-args": [
-                    "--share=network"
-                ],
+                "build-args": ["--share=network"],
                 "arch": {
                     "x86_64": {
                         "env": {
@@ -44,7 +38,7 @@
                 }
             },
             "build-commands": [
-                "flutter build linux --release",
+                "flutter build linux --release --no-pub",
                 "install -d \"${FLATPAK_DEST}/lib\"",
                 "cp -r $BUNDLE_PATH/lib/* \"${FLATPAK_DEST}/lib/\"",
                 "install -d \"${FLATPAK_DEST}/data\"",
@@ -52,23 +46,23 @@
                 "install -d \"${FLATPAK_DEST}/bin\"",
                 "install -Dm755 $BUNDLE_PATH/sly \"${FLATPAK_DEST}/sly\"",
                 "ln -s \"${FLATPAK_DEST}/sly\" \"${FLATPAK_DEST}/bin/sly\"",
-                "install -Dm644 packaging/linux/${FLATPAK_ID}.desktop \"${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop\"",
-                "install -Dm644 packaging/linux/${FLATPAK_ID}.metainfo.xml \"${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml\"",
-                "install -Dm644 packaging/linux/${FLATPAK_ID}.svg \"${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg\"",
-                "install -Dm644 packaging/linux/${FLATPAK_ID}-symbolic.svg \"${FLATPAK_DEST}/share/icons/hicolor/symbolic/apps/${FLATPAK_ID}-symbolic.svg\""
+                "install -Dm644 linux/${FLATPAK_ID}.desktop \"${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop\"",
+                "install -Dm644 linux/flatpak/${FLATPAK_ID}.metainfo.xml \"${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml\"",
+                "install -Dm644 linux/flatpak/${FLATPAK_ID}.svg \"${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg\"",
+                "install -Dm644 linux/flatpak/${FLATPAK_ID}-symbolic.svg \"${FLATPAK_DEST}/share/icons/hicolor/symbolic/apps/${FLATPAK_ID}-symbolic.svg\""
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/flutter/flutter.git",
-                    "tag": "3.27.3",
+                    "tag": "3.44.4",
                     "dest": "flutter"
                 },
                 {
                     "type": "git",
                     "url": "https://git.kramo.page/Sly.git",
-                    "tag": "v1.0.0",
-                    "commit": "c9d05657bff56e0605143d6fac308554f5152ea7"
+                    "tag": "v1.1.1",
+                    "commit": "ac68637fbf3383dd0870410e1d18e363ebb6151c"
                 }
             ]
         }
