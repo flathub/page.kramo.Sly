@@ -60,9 +60,9 @@
                 },
                 {
                     "type": "git",
-                    "url": "https://git.kramo.page/Sly.git",
-                    "tag": "v1.1.1",
-                    "commit": "ac68637fbf3383dd0870410e1d18e363ebb6151c"
+                    "url": "https://codeberg.org/Sly/Sly",
+                    "tag": "v1.1.2",
+                    "commit": "2cd3004c2ab5aec966b8f1cca09a96d13198bab8"
                 }
             ]
         }
