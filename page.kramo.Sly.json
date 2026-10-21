@@ -5,7 +5,7 @@
     "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm19"
+        "org.freedesktop.Sdk.Extension.llvm21"
     ],
     "command": "sly",
     "separate-locales": false,
@@ -35,8 +35,8 @@
                         }
                     }
                 },
-                "append-path": "/usr/lib/sdk/llvm19/bin:/var/lib/flutter/bin",
-                "prepend-ld-library-path": "/usr/lib/sdk/llvm19/lib",
+                "append-path": "/usr/lib/sdk/llvm21/bin:/var/lib/flutter/bin",
+                "prepend-ld-library-path": "/usr/lib/sdk/llvm21/lib",
                 "env": {
                     "PUB_CACHE": "/run/build/Sly/.pub-cache"
                 }
