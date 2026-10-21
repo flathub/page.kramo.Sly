@@ -3,7 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": ["org.freedesktop.Sdk.Extension.llvm21"],
+    "sdk-extensions": ["org.freedesktop.Sdk.Extension.llvm22"],
     "command": "sly",
     "separate-locales": false,
     "finish-args": [
@@ -31,8 +31,8 @@
                         }
                     }
                 },
-                "append-path": "/usr/lib/sdk/llvm21/bin:/run/build/Sly/flutter/bin",
-                "prepend-ld-library-path": "/usr/lib/sdk/llvm21/lib",
+                "append-path": "/usr/lib/sdk/llvm22/bin:/run/build/Sly/flutter/bin",
+                "prepend-ld-library-path": "/usr/lib/sdk/llvm22/lib",
                 "env": {
                     "PUB_CACHE": "/run/build/Sly/.pub-cache"
                 }
